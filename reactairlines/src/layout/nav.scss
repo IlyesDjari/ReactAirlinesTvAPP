@@ -1,0 +1,52 @@
+#searchbar {
+    color: rgba(255, 255, 255, 0.75);
+    padding-left: 1vw;
+    position: fixed;
+    right: 5vh;
+    width: 20vw;
+    top: 2.5vh;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: #3a3b3c;
+    border: none;
+  }
+
+  #searchbtn img{
+    position: fixed;
+     background-color: none;
+     border: none;
+     top: 3.5vh;
+     right: 6vh;
+     height: 3vh;
+    }
+    
+    
+    #searchbtn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      position: fixed;
+      top: 2.5vh;
+      right: 5vh;
+      height: 5vh;
+    }
+    
+    #navbar {
+      height: 10vh;
+      width: 100vw;
+      background-color: #242526 ;
+      display: flex;
+    }
+    
+    #navbar > img {
+      align-self: center;
+      margin-left: 2vw;
+      width: 3vw;
+    }
+    
+    #navbar h1 {
+      color: white;
+      align-self: center;
+      margin-left: 1vw;
+      font-size: 3vh;
+    }

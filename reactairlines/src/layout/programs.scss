@@ -1,0 +1,63 @@
+#fullProgram {
+    margin-top: 2.5vh;
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    flex-wrap: wrap;
+  }
+  
+  #program {
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #coverimg {
+    height: 50vh;
+    margin: 2.5vh 0.5vw 0 1vw;
+    border-radius: 10px;
+  }
+ 
+  #duration {
+   color: rgba(255, 255, 255, 0.9);
+   font-size: 1.5vh;
+   padding: 0 0 1vh 1vw;
+  }
+ 
+  #info {
+    background-color: #3a3b3c;
+    margin:  1.25vw 2.5vh 0 1vw;
+    width: 80vw;
+    height: 50vh;
+    border-radius:  10px;
+  }
+ 
+  #info h2 {
+    padding: 1.5vh 0 0 1vw;
+    font-size: 2.5vh;
+    font-weight: 900;
+    color: #ffffff;
+  }
+ 
+  #airtime{
+   padding: 1vw 0 0 1vw;
+   color: rgb(187, 15, 255);
+   font-weight: 800;
+   font-size: 3vh;
+   display: flex;
+   flex-direction: row;
+ }
+ 
+ #genre {
+   color: rgba(255, 255, 255, 0.5);
+   font-size: 2vh;
+   padding-left: 1vw;
+ }
+ 
+  #info p {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 2vh 3vw 0 0.5vw;
+    font-size: 1.5vh;
+  }
+ 
+ 
