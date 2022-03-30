@@ -4,11 +4,9 @@ import Channel from './component/Channel';
 import { Result } from './component/SearchList';
 import { Search } from './component/Search';
 import { useSearch } from './services/CallApiSearch';
-import { useDetail } from './services/CallApiDetail';
 
 function App() {
   const { series, search, itemClick, details } = useSearch();
-  const { detail } = useDetail();
   return <div>
     <Nav></Nav>
       <Search search={ search }/>
