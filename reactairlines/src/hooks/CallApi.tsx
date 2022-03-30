@@ -1,11 +1,12 @@
 let current: any[] = []
 
-    apiCall()
-    
-async function apiCall() {
+CallApi();
+
+async function CallApi() {
     let response = await fetch(
       'https://api.tvmaze.com/schedule');
     let json = await response.json();
+
     json.map((content: any) => current.push(content));
   }
 

@@ -1,0 +1,52 @@
+.results {
+  color: white;
+  font-weight: 700;
+  font-size: 3vh;
+  text-align: center;
+  margin: 13vh 0 3vh 0;
+}
+
+.noImage {
+  text-align: center;
+  padding-top: 14.5vh;
+  font-weight: 600;
+  background-color: black;
+  color: white;
+  width: 11vw;
+  height: 29.5vh;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.grid {
+  display: flex;
+  overflow-x: auto;
+  
+  width: 80vw;
+  margin-left: 10vw;
+}
+
+.gridItem {
+  margin: 10px;
+  min-width: 11vw;
+  max-width: 11vw;
+  width: 20vw;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.movie {
+  overflow: hidden;
+}
+
+.movieText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 1vh;
+  font-size: 1.5vh;
+  font-weight: 900;
+}
