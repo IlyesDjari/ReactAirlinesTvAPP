@@ -6,5 +6,6 @@ function Nav() {
       <h1>ReactAirlines TV</h1>
         </div>
   }
+  
 
   export default Nav

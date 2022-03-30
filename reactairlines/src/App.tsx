@@ -3,8 +3,8 @@ import Nav from './component/Nav';
 import Channel from './component/Channel';
 import { Result } from './component/SearchList';
 import { Search } from './component/Search';
-import { useSearch } from './hooks/CallApiSearch';
-import { useDetail } from './hooks/CallApiDetail';
+import { useSearch } from './services/CallApiSearch';
+import { useDetail } from './services/CallApiDetail';
 
 function App() {
   const { series, search, itemClick, details } = useSearch();
@@ -27,6 +27,7 @@ function App() {
      <Channel></Channel>
      </div> ;
 }
+
 
 
 

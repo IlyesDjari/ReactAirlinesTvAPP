@@ -1,3 +1,8 @@
+  export interface detail {
+    detail: Details;
+  }
+  
+  
   export interface Details {
     id: number;
     name: string;

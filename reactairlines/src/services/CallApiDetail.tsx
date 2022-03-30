@@ -11,7 +11,6 @@ export const useDetail = () => {
       res => {
         setResult(res.data);
         console.log(res.data);
-        
       }
     );
   }

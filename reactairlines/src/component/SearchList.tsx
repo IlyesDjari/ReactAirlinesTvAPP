@@ -12,11 +12,10 @@ const NoImage = () => {
   return <div className={scss.noImage}>No image available</div>;
 };
 
-
 export const Result: React.FC<ResultProps> = ({ result, itemClick }) => {
   return (
     <>
-      <div className={ scss.results }> {result.length } results</div>
+      <div className={ scss.results }></div>
       <div className={ scss.grid }>
         {
           result.map(series => {

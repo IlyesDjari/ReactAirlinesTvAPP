@@ -1,4 +1,4 @@
-import current from '../hooks/CallApi'
+import current from '../services/CallApi'
 import '../layout/programs.scss'
 
 console.log(current);
@@ -7,9 +7,6 @@ console.log(current);
 function Programs() {
 
 
-  function sayHello(program: any) {
-  console.log("hello");
-  }
   
     return (
       <div id='fullProgram'>

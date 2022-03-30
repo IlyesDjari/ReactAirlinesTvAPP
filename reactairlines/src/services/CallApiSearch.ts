@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Series, Show } from '../model/series';
 import Axios from 'axios';
 
-export const getSearch = () => {
+export const useSearch = () => {
 
   const [result, setResult] = useState<Array<Series>>([]);
   const [details, setDetails] = useState<Show>();
