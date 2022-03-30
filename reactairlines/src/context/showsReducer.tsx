@@ -5,7 +5,7 @@ import {
   CLEAR_SINGLE_SHOW,
 } from "./type";
 
-const showsReducer = (state, action) => {
+const showsReducer = (state : any, action : any) => {
   switch (action.type) {
     case SET_LOADING:
       return {

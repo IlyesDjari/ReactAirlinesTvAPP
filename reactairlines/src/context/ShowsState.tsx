@@ -9,7 +9,7 @@ import {
   CLEAR_SINGLE_SHOW,
 } from "./type";
 
-const ShowsState = (props) => {
+const ShowsState = (props : any) => {
   const initialState = {
     shows: [],
     singleShow: {},
@@ -18,7 +18,7 @@ const ShowsState = (props) => {
 
   const [state, dispatch] = useReducer(ShowsReducer, initialState);
 
-  const searchShows = async (searchTerm) => {
+  const searchShows = async (searchTerm : any) => {
     dispatch({ type: SET_LOADING });
 
     const { data } = await axios.get(
@@ -33,7 +33,7 @@ const ShowsState = (props) => {
     });
   };
 
-  const getSingleShow = async (id) => {
+  const getSingleShow = async (id : any) => {
     dispatch({
       type: SET_LOADING,
     });
