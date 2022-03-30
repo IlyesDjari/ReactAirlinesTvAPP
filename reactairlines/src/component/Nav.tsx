@@ -1,11 +1,12 @@
 import '../layout/nav.scss'
+import { Link } from 'react-router-dom'
 
-function Nav() {
+const Nav = () => {
     return <div id="navbar">
-      <img src={require('../testimages/reactpurple.png')} alt="logo"/>
-      <h1>ReactAirlines TV</h1>
+    <Link to="/">
+      <img id='logo' src={require('../testimages/reactpurple.png')} alt="logo"/>
+      <h1 id='headerlogo'>ReactAirlines TV</h1></Link>
         </div>
   }
-  
 
   export default Nav

@@ -1,33 +1,17 @@
 import './App.css';
-import Nav from './component/Nav';
 import Channel from './component/Channel';
-import { Result } from './component/SearchList';
-import { Search } from './component/Search';
-import { useSearch } from './services/CallApiSearch';
+import Info from './component/Info'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-  const { series, search, itemClick, details } = useSearch();
-  return <div>
-    <Nav></Nav>
-      <Search search={ search }/>
-      <Result result={ series } itemClick={ itemClick }/>
-      {
-        details &&
-        <div>
-          <h1 >{ details?.name }</h1>
-          <ul>
-            {
-              details?.genres.map(g => <li key={ g }>{ g }</li>)
-            }
-          </ul>
-        </div>
-      }
-     <Channel></Channel>
-     </div> ;
+  return  <div>
+      <Routes>
+      <Route path="/" element={<Channel />} />
+      <Route path="/show/:id" element={<Info/>}/>
+      </Routes>
+     </div> 
+     
 }
-
-
-
 
 export default App;
 

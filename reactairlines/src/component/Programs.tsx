@@ -1,30 +1,24 @@
-import current from '../services/CallApi'
 import '../layout/programs.scss'
+import { Link } from 'react-router-dom'
 
-console.log(current);
-
-
-function Programs() {
-
-
+const Programs = ( info : any) => {
+  
+  console.log(info);
   
     return (
-      <div id='fullProgram'>
-         {current.map((program: any) => (
-    <div id='program'>
-      <button id='buttonDetail'  >
-      <><img id='coverimg'src={program.show.image.medium} alt="" />
+      <Link to={`/show/${info.id}`} id='program'>
+      <div id='program'>
+      <>
+      <img id='coverimg'src={info.image} alt="" />
       <div id='info'>
-          <h1 id='airtime' >{program.airtime}</h1> 
-          <h1 id='duration' >{program.show.runtime} minutes</h1>
-          <h1 id='genre'>{program.show.type}</h1>
-          <h2 >{program.show.name} - {program.name}</h2>
-          <p  dangerouslySetInnerHTML={{__html:program.show.summary}}></p>
+          <h1 id='airtime' >{info.airtime} {info.time}</h1> 
+          <h2 >{info.name}</h2>
         </div></> 
-        </button>
     </div>
-     ))}
-  </div>
+      </Link>
+
+
+    
     )
   }
   

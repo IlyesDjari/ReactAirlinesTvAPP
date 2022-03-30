@@ -1,29 +1,22 @@
-import React, { useState } from 'react';
+import { useState, useContext } from "react"
+import showsContext from "../context/showsContext"
 import '../layout/nav.scss'
 
-interface SearchProps {
-  search: (text:string) => void;
+const Search = () => {
+  const [askedSearch, setSearch] = useState("")
+  const {searchShows} = useContext(showsContext)
+  const onSearchHandeling = (e: { preventDefault: () => void; }) => 
+  {e.preventDefault()
+    searchShows(askedSearch)
+    
+    ;}
+  return <div >
+<form >
+  <input id="searchbar" type="text" placeholder="Search your show..." value={askedSearch}
+   onChange={(e) => setSearch(e.target.value)}/>
+  <button className="buttonSearch" onClick={onSearchHandeling}>Search</button>
+</form>
+  </div>
 }
-export const Search: React.FC<SearchProps> = (props) => {
 
-  const [text, setText] = useState<string>('');
-  const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setText(event.currentTarget.value);
-  };
-
-  const searchHandler = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    props.search(text);
-  };
-
-  return (
-    <form onSubmit={ searchHandler }>
-      <input id='searchbar'
-        type="text"
-        placeholder="search"
-        value={ text }
-        onChange={ onChangeHandler }
-      />
-    </form>
-  );
-};
+export default Search

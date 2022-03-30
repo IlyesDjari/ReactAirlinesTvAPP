@@ -4,10 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ShowsState from './context/ShowsState'
 
 ReactDOM.render(
   <BrowserRouter>
+  <ShowsState>
   <App/>
+  </ShowsState>
   </BrowserRouter>,
   document.getElementById('root')
 );
