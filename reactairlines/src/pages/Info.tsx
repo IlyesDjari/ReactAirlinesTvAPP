@@ -8,7 +8,6 @@ import '../layout/info.scss'
 function Info() {
   const { getSingleShow, singleShow, loading } = useContext(ShowsContext);
   let { id } = useParams(); 
-  console.log(id);
 
   useEffect(() => {
     getSingleShow(id);
@@ -31,6 +30,7 @@ function Info() {
         <Loader />
       ) : (
         <div className="container">
+          <div className="imgDesc">
           <img
             src={
               singleShow.image
@@ -39,6 +39,10 @@ function Info() {
             }
             alt={singleShow.name}
           />
+          <div className="fullDesc">
+          </div>
+
+          </div>
 
           <div className="singleshow__info">
             <div className="whole">
@@ -48,11 +52,12 @@ function Info() {
               <strong>Status:</strong> {singleShow.status && singleShow.status}
             </p>
             </div>
-            <h2>{singleShow.schedule.days[0]}</h2>
-
-
+            <h2> {singleShow.schedule.days[0]} {singleShow.schedule.time} </h2>
             </div>
+
             <hr />
+
+           <div className="second">
             <div className="singleshow__genre">
             {singleShow.genres &&
               singleShow.genres.map((genre: any) => (
@@ -64,6 +69,8 @@ function Info() {
               <strong>Rating:</strong>{" "}
               {singleShow.rating ? singleShow.rating.average : "No rating"}
             </p>
+              </div>
+              <h2>{singleShow.runtime} minutes</h2>
               </div>
             
             <p className="desc">{singleShow.summary && removeTags(singleShow.summary)}</p>

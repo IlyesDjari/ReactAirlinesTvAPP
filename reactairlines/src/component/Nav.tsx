@@ -5,19 +5,10 @@ const Nav = () => {
 
     return <div id="navbar">
     
-    <div className="wrap">
     <Link to="/">
-<span className="letter">R</span>
-<span className="letter">E</span>
-<span className="letter">A</span>
-<span className="letter">C</span>
-<span className="letter">T</span>
-<span className="letter"></span>
-<span className="letter">T</span>
-<span className="letter">V</span>
+<h2>React Airlines TV</h2>
 </Link>
-</div>
-      
+
         </div>
   }
 
