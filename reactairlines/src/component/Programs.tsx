@@ -15,6 +15,7 @@ const Programs = ( info : any) => {
           <h2 >{info.name}</h2>
         </div></> 
     </div>
+    <div className="text">See details</div>
       </Link>
 
 

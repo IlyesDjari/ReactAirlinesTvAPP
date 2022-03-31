@@ -8,7 +8,6 @@ const Search = () => {
   const onSearchHandeling = (e: { preventDefault: () => void; }) => 
   {e.preventDefault()
     searchShows(askedSearch)
-    
     ;}
   return <div >
 <form >

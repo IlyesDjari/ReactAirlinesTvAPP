@@ -22,19 +22,60 @@
       top: 0;
     }
     
-    #logo {
-      align-self: center;
-      margin-left: 2vw;
-      width: 3vw;
-    }
-    
-    #headerlogo {
-      color: white;
-      align-self: center;
-      margin-left: 1vw;
-      font-size: 3vh;
-    }
+* {
+  box-sizing: border-box;
+}
 
+.wrap {
+  width: auto;
+  margin: auto auto;
+  padding: 2.5vh 0 0 2.5vw;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 400px;
+  text-align: center;
+}
+
+.letter, .space {
+  display: inline-block;
+  font-size: 2.5vw;
+  font-weight: bold;
+  position: relative;
+  transform-style: preserve-3d;
+  text-shadow: 2px 2px 5px black;
+}
+.space {
+  width: .5em;
+}
+
+@for $i from 1 through 13 {
+  
+  $n: 1;
+  $r: random(10);
+  @if($r > 5){
+    $n: -1;
+  }
+  $x: (random(1000) + 300) * $n +px; 
+  $y: (random(1000) + 300) * $n +px;
+  $c: hsl(random(360), 100%, 50%);
+  $d: 360 * $n +deg;
+  @keyframes anim#{$i}{
+    0% {
+      transform: translate3d($x, $y, -1000px) rotate(0deg);
+      opacity: 0;
+    }
+    100% {
+      transform: translate3d(0,0,0) rotate($d);
+      opacity: .8;
+    }
+  }
+  .letter:nth-child(#{$i}){
+    animation: anim#{$i} 5s;
+    animation-delay: -$i * .2s;
+    color: #60c689;
+  }
+}    
+    
     .buttonSearch {
       position: fixed;
       top: 2.5vh;

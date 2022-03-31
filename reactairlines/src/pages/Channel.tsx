@@ -1,9 +1,10 @@
-import Programs from "./Programs"
-import Nav from './Nav';
-import Search from "./Search";
-import { ReactChild, ReactFragment, ReactPortal, useContext } from "react";
+import Programs from "../component/Programs"
+import Nav from '../component/Nav';
+import Search from "../component/Search";
+import { useContext } from "react";
 import ShowsContext from "../context/showsContext";
 import '../layout/channel.scss'
+import Loader from "../component/Loader";
 
 
 
@@ -15,7 +16,7 @@ const Channel = () => {
 
     return  <><Nav/><div id='channelbox'>
       <Search/>
-      {loading ? <h2>I am loading the website</h2> :
+      {loading ? <Loader/> :
         <div id='fullProgram'>
          {shows.map((ashow: { show: any; }) => <Programs 
               key={ashow.show.id}
@@ -23,7 +24,7 @@ const Channel = () => {
               image={
                 ashow.show.image
                   ? ashow.show.image.medium
-                  : "https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"
+                  : "https://i.ibb.co/xswKy6P/noImage.png"
               }
               name={ashow.show.name}
               rating={

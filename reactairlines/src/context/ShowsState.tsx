@@ -20,13 +20,10 @@ const ShowsState = (props : any) => {
 
   const searchShows = async (searchTerm : any) => {
     dispatch({ type: SET_LOADING });
-
     const { data } = await axios.get(
       `https://api.tvmaze.com/search/shows?q=${searchTerm}`
     );
-
     console.log(data);
-
     dispatch({
       type: SEARCH_SHOWS,
       payload: data,
@@ -37,11 +34,8 @@ const ShowsState = (props : any) => {
     dispatch({
       type: SET_LOADING,
     });
-
     const { data } = await axios.get(`https://api.tvmaze.com/shows/${id}`);
-
     console.log(data);
-
     dispatch({
       type: SET_SINGLE_SHOW,
       payload: data,
