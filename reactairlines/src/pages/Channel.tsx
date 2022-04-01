@@ -5,6 +5,7 @@ import { useContext } from "react";
 import ShowsContext from "../context/showsContext";
 import '../layout/channel.scss'
 import Loader from "../component/Loader";
+import MainPrograms from "../component/MainPrograms";
 
 
 
@@ -37,6 +38,7 @@ const Channel = () => {
          />)
          }
          </div>}
+         <MainPrograms/>
     </div></>
   }
   

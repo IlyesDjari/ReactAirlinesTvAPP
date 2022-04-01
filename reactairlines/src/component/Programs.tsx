@@ -2,9 +2,6 @@ import '../layout/programs.scss'
 import { Link } from 'react-router-dom'
 
 const Programs = ( info : any) => {
-  
-  console.log(info);
-  
     return (
       <Link to={`/show/${info.id}`} id='program'>
       <div id='program'>

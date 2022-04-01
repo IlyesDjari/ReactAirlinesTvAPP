@@ -1,13 +1,11 @@
 #fullProgram {
-    position: absolute;
-    top: 20vh;
-    left: 10vw;
+    margin-top: 20vh;
     display: flex;
     flex-direction: row;
     gap: 2vw;
     width: 80vw;
     flex-wrap: wrap;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
   }
 
   .text {
@@ -46,6 +44,7 @@
 
   #info {
     background-color: #262626;
+    padding: 0 1vw;
     border-radius: 0 0  10px 10px;
     width: 14.25vw;
   }

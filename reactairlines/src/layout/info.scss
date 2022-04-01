@@ -1,5 +1,5 @@
 .container img {
-    margin: 20vh 0 0 10vw;
+    margin: 30vh 0 0 10vw;
     width: 15vw;
     border-radius: 20px 20px 0 0;
 }
@@ -53,11 +53,11 @@
     background-color: gold;
 }
 
-hr {
-   background-color: white;
-   margin: 2vh 0 0 0;
-    width: 60vw;
-    height: 0.5vh;
+.theHr {
+    margin-top: 2vh;
+   background-color: white; 
+   width: 60vw;
+   height: 0.5vh;
 }
 
 .desc {
@@ -98,5 +98,33 @@ hr {
     border-radius: 0 0 20px 20px;
     margin: 0 0 0 10vw;
     width: 15vw;
-    height: 30vh;
+    height: 15vh;
+}
+
+.share {
+    background-color: #007ff7;
+    width: 5vw;
+    border-radius: 10px;
+    padding: 1vh;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 12vh;
+}
+
+.network {
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 3vh;
+    font-size: 1.75vh;
+}
+
+.backnav {
+    position: absolute;
+    display: flex;
+    gap: 1vw;
+    top: 17.5vh;
+    left: 10vw;
+    color: white;
 }
