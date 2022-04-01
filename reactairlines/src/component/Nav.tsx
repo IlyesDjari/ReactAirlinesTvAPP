@@ -8,7 +8,6 @@ const Nav = () => {
     <Link to="/">
 <h2>React Airlines TV</h2>
 </Link>
-
         </div>
   }
 
