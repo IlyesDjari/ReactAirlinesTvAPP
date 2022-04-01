@@ -7,7 +7,6 @@ import '../layout/info.scss'
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { Link } from 'react-router-dom'
 
-
 function Info() {
   const { getSingleShow, singleShow, loading } = useContext(ShowsContext);
   let { id } = useParams(); 
@@ -100,6 +99,14 @@ function Info() {
 
               <p className="desc">{singleShow.summary && removeTags(singleShow.summary)}</p>
             </div>
+            
+            <div className="dis">
+            <h2>Disclaimer: Watching episodes is completly illegal, we aren't responsible in case of problems.</h2>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><div className="watch">
+              <em><i></i><i></i><i></i><i></i><i></i><i></i></em><span>Watch episode</span>
+              </div>
+              </a> 
+          </div>
           </div></>
       )}
     </>
